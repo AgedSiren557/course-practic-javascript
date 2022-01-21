@@ -10,8 +10,8 @@ function onInputPriceDiscount(){
 
     if (inputDiscount.value != "" && inputPrice.value != ""){
         
-        var originalPrice = parseInt(inputPrice.value);
-        var discount = parseInt(inputDiscount.value);
+        var originalPrice = parseFloat(inputPrice.value);
+        var discount = parseFloat(inputDiscount.value);
         var newPrice = getDiscountPrice(originalPrice,discount);
 
         document.getElementById("finalPrice").innerText = "$"+newPrice.toFixed(2) ;
